@@ -7,7 +7,9 @@ app.use(userRouter);
 
 
 app.use("/" , (req, res) => {
-    res.send("<h1>This is home page</h1>");
+    // res.send("<h1>This is home page</h1>");
+    res.statusCode=200;
+    res.sendFile(__dirname+"/views/index.html");
   });
   
       
